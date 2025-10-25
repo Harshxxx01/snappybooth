@@ -1,0 +1,348 @@
+/* Modern Capture Page Styles */
+.captureContainer {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.captureHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.captureTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #fff, #2AA1E7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.captureSubtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.webcamContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.webcam {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.webcam:hover {
+  transform: scale(1.02);
+}
+
+.photoGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.photoCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photoCard:hover {
+  transform: translateY(-5px);
+}
+
+.photoCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photoCard:hover img {
+  transform: scale(1.05);
+}
+
+.controlsContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2rem;
+  margin: 2rem 0;
+  display: grid;
+  gap: 1.5rem;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.controlGroup {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-section, .background-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-preview {
+  width: 200px;
+  height: 120px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #1a1a1a;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-preview:hover {
+  border-color: #2AA1E7;
+  transform: scale(1.02);
+}
+
+.background-preview {
+  width: 100px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.background-preview:hover {
+  border-color: #2AA1E7;
+  transform: scale(1.02);
+}
+
+/* Add subtle animation to filter preview */
+.filter-preview {
+  animation: filterPreview 2s infinite;
+}
+
+@keyframes filterPreview {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.controlLabel {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.controlSelect {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.controlSelect:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #2AA1E7;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, #2AA1E7, #282878);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(42, 161, 231, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(42, 161, 231, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(42, 161, 231, 0);
+  }
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(42, 161, 231, 0.4);
+}
+
+.ctaButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  animation: none;
+}
+
+/* SEO Content Section */
+.seoContent {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 2rem;
+  margin: 2rem 0;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.seoTitle {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff, #2AA1E7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seoText {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.seoFeatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  color: #2AA1E7;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.featureText {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .captureTitle {
+    font-size: 2.2rem;
+  }
+
+  .captureSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .webcamContainer {
+    padding: 1.5rem;
+  }
+
+  .controlsContainer {
+    padding: 1.5rem;
+  }
+
+  .photoGallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .captureContainer {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(40, 40, 120, 0.95) 100%);
+  }
+
+  .webcamContainer,
+  .controlsContainer,
+  .seoContent {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
