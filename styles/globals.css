@@ -178,4 +178,7 @@
     flex-direction: column;
     align-items: center;
   }
+  .hero-image {
+    display: none;
+  }
 }

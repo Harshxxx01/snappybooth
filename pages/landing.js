@@ -18,24 +18,50 @@ function LandingPage() {
         <meta name="keywords" content="photo booth rental, event photobooth, wedding photo booth, birthday photo booth, custom photo strips, photo booth with filters, download photo strips" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Layout>
-        <section id="home" className="hero" style={{
-          background: 'linear-gradient(135deg, #270859 0%, #282878 25%, #2859A3 50%, #297DC5 75%, #2AA1E7 100%)',
-          margin: '7rem 2rem 0 2rem',
+      <Layout style={{
+        padding: '2rem',
+        '@media (max-width: 767px)': {
+          padding: '0',
+          margin: '2rem 2rem 0 2rem',
           borderRadius: '20px',
           overflow: 'hidden',
           zIndex: 1,
           padding: '8.2rem 0',
+        }
+      }}>
+        <section id="home" className="hero" style={{
+          background: 'linear-gradient(135deg, #270859 0%, #282878 25%, #2859A3 50%, #297DC5 75%, #2AA1E7 100%)',
+          margin: '2rem 2rem 0 2rem',
+          borderRadius: '20px',
+          overflow: 'hidden',
+          zIndex: 1,
+          padding: '8.2rem 0',
+          '@media (max-width: 767px)': {
+            margin: '2rem 2rem 0 2rem',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            zIndex: 1,
+            padding: '8.2rem 0',
+          }
         }}>
           <div className="hero-content" style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
+            '@media (max-width: 767px)': {
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center',
+            }
           }}>
             <div className="hero-text" style={{
               flex: 2,
               textAlign: 'center',
-              paddingLeft: '2rem'
+              '@media (max-width: 767px)': {
+                textAlign: 'center',
+                padding: '0',
+              }
             }}>
               <h1 className="hero-title" style={{
                 color: '#fff',
@@ -43,11 +69,19 @@ function LandingPage() {
                 fontWeight: 'bold',
                 padding: '0.6rem',
                 lineHeight: '1.3',
+                '@media (max-width: 767px)': {
+                  fontSize: '2rem',
+                  padding: '0.4rem',
+                }
               }}>Capture Memories with the Best Photobooth Experience</h1>
               <p className="hero-subtitle" style={{
                 color: '#fff',
                 fontSize: '1rem',
                 padding: '0.6rem',
+                '@media (max-width: 767px)': {
+                  fontSize: '0.8rem',
+                  padding: '0.4rem',
+                }
               }}>Make your event unforgettable with PhotoBooth Pro! Choose from stunning layouts, fun backgrounds, artistic filters & download custom photo strips instantly.</p>
               <button
                 className="cta-button"
@@ -61,6 +95,10 @@ function LandingPage() {
                   border: 'none',
                   cursor: 'pointer',
                   margin: '1rem',
+                  '@media (max-width: 767px)': {
+                    fontSize: '0.8rem',
+                    padding: '0.4rem',
+                  }
                 }}
               >
                 <style jsx>{`
@@ -73,7 +111,7 @@ function LandingPage() {
                 Start Capturing
               </button>
             </div>
-            <div className="hero-image" style={{ flex: 2, position: 'relative', zIndex: 1, overflow: 'hidden', margin: '-55rem 0 ' }}>
+            <div className="hero-image" style={{ flex: 2, position: 'relative', zIndex: 1, overflow: 'hidden', margin: '-55rem 0 '}}>
               <img src="../images/img1.png" alt="Photo Booth" style={{ objectFit: 'cover', borderRadius: '20px', zIndex: 2, margin: '0 0' }} />
             </div>
           </div>

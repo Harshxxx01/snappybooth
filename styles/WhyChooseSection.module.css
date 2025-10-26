@@ -163,3 +163,10 @@
   background: linear-gradient(135deg, rgba(40, 40, 120, 0.05), rgba(42, 161, 231, 0.05));
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .hero-image {
+    display: none;
+  }
+}
+
