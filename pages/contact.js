@@ -1,5 +1,7 @@
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
+import Footer from '../components/Footer';
+import styles from '../styles/ContactSection.module.css';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 
@@ -225,16 +227,7 @@ export default function Contact() {
         </motion.div>
       </div>
       
-      {/* Map Section */}
-      <div className="bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="h-96 w-full bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Interactive Map Placeholder</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </Layout>
   );
 }

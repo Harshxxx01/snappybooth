@@ -5,6 +5,7 @@ import Head from 'next/head';
 import FeatureSection from '../pages/features';
 import WhyChooseSection from '../components/WhyChooseSection';
 import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 import styles from '../styles/WhyChooseSection.module.css';
 
 function LandingPage() {
@@ -41,7 +42,7 @@ function LandingPage() {
             borderRadius: '20px',
             overflow: 'hidden',
             zIndex: 1,
-            padding: '8.2rem 0',
+            padding: '2rem 0',
           }
         }}>
           <div className="hero-content" style={{
@@ -165,8 +166,8 @@ function LandingPage() {
                   style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'left' }}
                 />
               </div>
-              <div className="w-1/2 sticky top-20 self-start" style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'left', paddingTop: '2rem' }}>
-                <p className="text-gray-600 text-lg leading-8">
+              <div className="about-scroll-text w-1/2 sticky top-20 self-start" style={{ alignItems: 'center', justifyContent: 'center', textAlign: 'left', paddingTop: '2rem' }}>
+                <p className="about-scroll-text1 text-gray-600 text-lg leading-8">
                   At PhotoBooth Pro, we specialize in premium photo booth experiences that bring joy to any occasion.
                   With a passion for photography, innovation, and fun, we’ve helped thousands of guests create keepsakes
                   they’ll cherish forever. From instant print booths to digital sharing and themed props, our mission is to
@@ -220,28 +221,7 @@ function LandingPage() {
 
         {/* Contact Section */}
         <ContactSection />
-        {/* Footer */}
-        <footer className="footer" style={{ backgroundColor: '#1a1a1a', color: '#fff', padding: '2rem 0' }}>
-          <div className="footer-content" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
-            <div className="footer-logo" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-              PhotoBooth Pro
-            </div>
-            <div className="footer-links" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-              <a href="#home" style={{ color: '#fff', textDecoration: 'none' }}>Home</a>
-              <a href="#about" style={{ color: '#fff', textDecoration: 'none' }}>About</a>
-              <a href="#features" style={{ color: '#fff', textDecoration: 'none' }}>Features</a>
-              <a href="#contact" style={{ color: '#fff', textDecoration: 'none' }}>Contact</a>
-            </div>
-            <div className="footer-social" style={{ display: 'flex', gap: '1rem' }}>
-              <a href="#" style={{ color: '#fff', textDecoration: 'none' }}>Facebook</a>
-              <a href="#" style={{ color: '#fff', textDecoration: 'none' }}>Instagram</a>
-              <a href="#" style={{ color: '#fff', textDecoration: 'none' }}>Twitter</a>
-            </div>
-          </div>
-          <div className="footer-bottom" style={{ borderTop: '1px solid #333', marginTop: '2rem', paddingTop: '1rem', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.9rem' }}>&copy; 2025 PhotoBooth Pro. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </Layout>
     </>
   );

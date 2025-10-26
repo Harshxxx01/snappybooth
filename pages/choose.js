@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -755,28 +756,7 @@ export default function ChooseLayout() {
         </motion.div>
       </motion.div>
 
-      {/* Enhanced Footer */}
-<footer className="footer" style={{ backgroundColor: '#1a1a1a', color: '#fff', padding: '2rem 0' }}>
-          <div className="footer-content" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
-            <div className="footer-logo" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-              PhotoBooth Pro
-            </div>
-            <div className="footer-links" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-              <a href="#home" style={{ color: '#fff', textDecoration: 'none' }}>Home</a>
-              <a href="#about" style={{ color: '#fff', textDecoration: 'none' }}>About</a>
-              <a href="#features" style={{ color: '#fff', textDecoration: 'none' }}>Features</a>
-              <a href="#contact" style={{ color: '#fff', textDecoration: 'none' }}>Contact</a>
-            </div>
-            <div className="footer-social" style={{ display: 'flex', gap: '1rem' }}>
-              <a href="#" style={{ color: '#fff', textDecoration: 'none' }}>Facebook</a>
-              <a href="#" style={{ color: '#fff', textDecoration: 'none' }}>Instagram</a>
-              <a href="#" style={{ color: '#fff', textDecoration: 'none' }}>Twitter</a>
-            </div>
-          </div>
-          <div className="footer-bottom" style={{ borderTop: '1px solid #333', marginTop: '2rem', paddingTop: '1rem', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.9rem' }}>&copy; 2025 PhotoBooth Pro. All rights reserved.</p>
-          </div>
-        </footer>
+      <Footer />
     </Layout>
   );
 }

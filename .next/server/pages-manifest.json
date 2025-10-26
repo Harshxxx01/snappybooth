@@ -2,9 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.js",
   "/landing": "pages/landing.js",
-  "/choose": "pages/choose.js",
-  "/privacy-policy": "pages/privacy-policy.js",
+  "/contact": "pages/contact.js",
   "/capture": "pages/capture.js"
 }

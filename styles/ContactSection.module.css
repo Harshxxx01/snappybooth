@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 1.5rem 1rem;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,6 +29,13 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .sectionTitle::after {
   content: '';
   position: absolute;
@@ -38,18 +51,40 @@
 .contactInfo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-  padding: 0 2rem;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .contactInfo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .contactItem {
   background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 15px;
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .contactItem {
+    padding: 1.25rem;
+  }
+  
+  .contactItem h3 {
+    font-size: 1.25rem;
+  }
+  
+  .contactItem p {
+    font-size: 1rem;
+  }
 }
 
 .contactItem h3 {
@@ -81,6 +116,14 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 768px) {
+  .contactForm {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
 .formContent {
   flex: 1;
   display: flex;
@@ -94,6 +137,16 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .formImage {
+    display: none;
+  }
+  
+  .formContent {
+    width: 100%;
+  }
 }
 
 .formImage img {

@@ -167,6 +167,17 @@
 @media (max-width: 768px) {
   .hero-image {
     display: none;
+  } 
+  .about-scroll-text {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+  .about-scroll-text1 {
+    display:none;
+  }
+
+  
 }
 
