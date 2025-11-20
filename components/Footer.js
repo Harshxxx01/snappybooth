@@ -10,6 +10,7 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerLogo}>
           <h3>PhotoBooth Pro</h3>
+          <p>Your Photo Booth Solution</p>
         </div>
         <div className={styles.footerLinks}>
           <Link href="/#home" className={styles.footerLink}>Home</Link>
